@@ -7,8 +7,8 @@ type CartItemProps = {
   id: number;
   quantity: number;
 };
-const CartItem = ({ id, quantity }: CartItemProps) => {
-  const { getQuantity, removeFromCart, cartItems } = useCart();
+const CartItem = ({ id }: CartItemProps) => {
+  const { getQuantity, removeFromCart } = useCart();
   const item = storeItems.find((item) => item.id === id);
 
   if (item == null) return null;

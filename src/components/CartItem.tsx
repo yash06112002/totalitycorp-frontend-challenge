@@ -3,7 +3,7 @@ import { useCart } from "../context/CartContext";
 import storeItems from "../data/items.json";
 import CloseIcon from "@mui/icons-material/Close";
 
-type CartItemProps = {
+export type CartItemProps = {
   id: number;
   quantity: number;
 };

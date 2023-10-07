@@ -133,8 +133,10 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                <Link to={page === "home" ? "" : page}>
-                  {" "}
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to={page === "home" ? "" : page}
+                >
                   {capitalize(page)}
                 </Link>
               </Button>

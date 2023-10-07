@@ -27,8 +27,6 @@ const CartItem = ({ id }: CartItemProps) => {
         />
         <div
           style={{
-            // display: "flex",
-            // justifyContent: "space-between",
             width: "30%",
           }}
         >

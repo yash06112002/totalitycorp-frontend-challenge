@@ -18,7 +18,7 @@ export default function Item({ data }: any) {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        height="194"
+        height="150px"
         image={data.imgUrl}
         alt={data.name}
       />

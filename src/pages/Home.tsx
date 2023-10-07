@@ -12,9 +12,10 @@ const Home = () => {
       <Sorting setStoreItems={setStoreItems} storeItems={storeItems} />
       <Grid
         container
-        spacing={{ xs: 2, md: 2 }}
-        columns={{ xs: 6, sm: 8, md: 12 }}
+        spacing={{ xs: 4, md: 4 }}
+        columns={{ xs: 2, sm: 8, md: 12 }}
         justifyContent={"center"}
+        height={"70%"}
       >
         {storeItems.map((item) => (
           <Grid item xs={4} key={item.id}>

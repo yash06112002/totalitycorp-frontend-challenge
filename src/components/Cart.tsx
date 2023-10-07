@@ -6,6 +6,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useCart } from "../context/CartContext";
 import CartItem from "./CartItem";
 import storeItems from "../data/items.json";
+import Checkout from "./Checkout";
 
 const style = {
   position: "absolute" as "absolute",
@@ -25,6 +26,10 @@ export default function Cart() {
   const handleClose = () => setOpen(false);
   const { cartItems } = useCart();
 
+  const totalAmount = cartItems.reduce((total, cartItem) => {
+    const item = storeItems.find((item) => item.id === cartItem.id);
+    return total + (item?.price || 0) * cartItem.quantity;
+  }, 0);
   return (
     <div>
       <Button onClick={handleOpen} sx={{ color: "white" }}>
@@ -50,13 +55,9 @@ export default function Cart() {
             }}
           >
             <p>Total</p>
-            <p>
-              {cartItems.reduce((total, cartItem) => {
-                const item = storeItems.find((item) => item.id === cartItem.id);
-                return total + (item?.price || 0) * cartItem.quantity;
-              }, 0)}
-            </p>
+            <p>{totalAmount}</p>
           </div>
+          <Checkout totalAmount={totalAmount} />
         </Box>
       </Modal>
     </div>

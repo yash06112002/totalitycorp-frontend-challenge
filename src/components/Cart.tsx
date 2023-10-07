@@ -13,11 +13,12 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: "80vw",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
+  display: { xs: "inline", md: "flex" },
 };
 
 export default function Cart() {
@@ -31,7 +32,7 @@ export default function Cart() {
     return total + (item?.price || 0) * cartItem.quantity;
   }, 0);
   return (
-    <div>
+    <div style={{}}>
       <Button onClick={handleOpen} sx={{ color: "white" }}>
         <ShoppingCartIcon sx={{ marginRight: 2 }} />
       </Button>
@@ -50,12 +51,12 @@ export default function Cart() {
               display: "flex",
               justifyContent: "space-around",
               gap: "2",
-              width: "70%",
+              width: "80%",
               marginLeft: "20%",
             }}
           >
             <p>Total</p>
-            <p>{totalAmount}</p>
+            <p>$ {totalAmount}</p>
           </div>
           <Checkout totalAmount={totalAmount} />
         </Box>

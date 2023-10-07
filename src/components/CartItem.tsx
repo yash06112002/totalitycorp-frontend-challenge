@@ -20,14 +20,15 @@ const CartItem = ({ id }: CartItemProps) => {
           src={item.imgUrl}
           style={{
             height: "75px",
-            width: "125px",
-            objectFit: "cover",
+            width: "50%",
+            objectFit: "contain",
             margin: 10,
           }}
         />
         <div
           style={{
             width: "30%",
+            gap: "3",
           }}
         >
           <p>{item.name}</p>

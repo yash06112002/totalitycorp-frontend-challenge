@@ -25,6 +25,10 @@ This project is a React-based e-commerce website that replicates a shopping site
 ### Frontend Framework
 - React: We chose React as our frontend framework because of its component-based architecture, which allows for easy organization and reusability of UI elements.
 
+### Styling
+- Material-UI: We used Material-UI, a popular React UI framework, for styling. Material-UI provides pre-built components, themes, and styles that help maintain a consistent and visually appealing design throughout the application.
+- CSS-in-JS: Material-UI utilizes a CSS-in-JS approach, allowing us to define component-specific styles directly in our React components. This approach enhances the maintainability and reusability of styles.
+
 ### State Management
 - React Context API: We used React's built-in Context API for state management. It simplifies the management of the shopping cart state across components without the need for external libraries.
 
